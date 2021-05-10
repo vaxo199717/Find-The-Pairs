@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Creepster', cursive;
+}
+
+body {
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  -webkit-box-shadow: inset 0px 0px 100px 50px black;
+          box-shadow: inset 0px 0px 100px 50px black;
+}
+
+.start-screen {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.904);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.start-screen .start-screen-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.start-screen .start-screen-content .start-text {
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  color: #ffbc04;
+}
+
+.start-screen .start-screen-content .difficulty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  font-size: 40px;
+  color: white;
+}
+
+.start-screen .start-screen-content .difficulty div {
+  cursor: pointer;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.start-screen .start-screen-content .difficulty div:hover {
+  color: #0047a5;
+}
+
+.start-screen .start-screen-content .difficulty .difficulty-style {
+  color: #0069f1;
+}
+
+.start-screen .start-screen-content .start-button {
+  text-align: center;
+  width: 100%;
+}
+
+.start-screen .start-screen-content .start-button #start-btn {
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  padding: 10px 20px;
+  font-size: 70px;
+}
+
+.start-screen .start-screen-content .start-button #start-btn:hover {
+  color: #bb0000;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .card-container {
+  width: 670px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .card-container img {
+  cursor: pointer;
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.container .card-container img:hover {
+  -webkit-box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.644);
+          box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.644);
+}
+
+.container .info {
+  display: none;
+  width: 200px;
+  height: 500px;
+}
+
+.container .info div {
+  height: 25%;
+  text-align: center;
+}
+
+.container .info div .text {
+  font-size: 25px;
+  color: white;
+  padding-top: 40px;
+}
+
+.container .info div #timetext {
+  font-size: 25px;
+  color: white;
+}
+
+.container .info div #totalclicks {
+  font-size: 25px;
+  color: white;
+}
+
+.container .info div .match-cuantity {
+  font-size: 25px;
+  color: white;
+}
+
+.container .info div #restartBtn {
+  font-size: 40px;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+
+.container .info div #restartBtn:hover {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

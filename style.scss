@@ -1,0 +1,140 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Creepster', cursive;
+}
+
+@mixin infoStyle {
+    font-size: 25px;
+    color: white;  
+}
+
+body{
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    box-shadow: inset 0px 0px 100px 50px black;
+}
+.start-screen{
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, 0.904);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    .start-screen-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .start-text{
+            text-align: center;
+            width: 100%;
+            font-size: 50px;
+            color: rgb(255, 188, 4);
+        }
+        .difficulty{
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: auto;
+            margin-left: auto;
+            width: 60%;
+            font-size: 40px;
+            color:white;
+
+            div{
+                cursor:pointer;
+                transition: 500ms;
+                &:hover{
+                    color:rgb(0, 71, 165)
+                }
+            }
+            .difficulty-style{
+                color: rgb(0, 105, 241);
+            }
+        }
+        .start-button{
+            text-align: center;
+            width: 100%;
+            #start-btn{
+                color: white;
+                cursor:pointer;
+                background-color: transparent;
+                border:none;
+                outline:none;
+                transition: 500ms;
+                padding:10px 20px;
+                font-size: 70px;
+
+                &:hover{
+                    color: rgb(187, 0, 0);
+                }
+            }
+        }
+    }
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-container{
+        width: 670px;
+        height: 500px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+        flex-wrap: wrap;
+        img{
+            cursor:pointer;
+            width: 100px;
+            height: 150px;
+            border-radius: 10px;
+            transition: 300ms;
+            &:hover{
+                box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.644);
+            }
+        }
+    }
+    .info{
+        display: none;
+        width: 200px;
+        height: 500px;
+
+        div{
+
+            height: 25%;
+            text-align: center;
+            .text{
+                @include infoStyle;
+                padding-top: 40px;
+            
+            }
+            #timetext{
+                @include infoStyle;
+            }
+            #totalclicks{
+                @include infoStyle;
+            }
+            .match-cuantity{
+                @include infoStyle;
+            }
+            #restartBtn{
+                font-size: 40px;
+                color: white;
+                background:transparent;
+                border:none;
+                outline: none;
+                cursor:pointer;
+                margin-top: 30px;
+                padding: 10px 20px;
+                &:hover{
+                    transition: all 500ms;
+                    color: red;
+                }
+            }
+        }
+    }
+}
