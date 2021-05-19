@@ -82,7 +82,7 @@ body{
     align-items: center;
     .card-container{
         width: 670px;
-        height: 500px;
+ 
         display: flex;
         justify-content: space-evenly;
         align-items:center;
@@ -143,6 +143,10 @@ body{
         height:100vh;
         padding-top: 5px;
         flex-direction: column;
+        .card-container{
+            width: 600px;
+            height: 700px;
+        }
         .info{
             width: 100%;
             justify-content: space-evenly;
@@ -157,4 +161,15 @@ body{
         background-attachment: fixed;
        
     }
+}
+@media (max-width: 650px) {
+    .container{
+        height: auto;
+        .card-container{
+            width: 500px;
+            height: auto;
+        }
+
+    }
+
 }

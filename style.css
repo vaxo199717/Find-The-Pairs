@@ -107,7 +107,6 @@ body {
 
 .container .card-container {
   width: 670px;
-  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,6 +192,10 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .container .card-container {
+    width: 600px;
+    height: 700px;
+  }
   .container .info {
     width: 100%;
     -webkit-box-pack: space-evenly;
@@ -204,6 +207,16 @@ body {
   }
   body {
     background-attachment: fixed;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    height: auto;
+  }
+  .container .card-container {
+    width: 500px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
