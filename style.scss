@@ -147,7 +147,8 @@ body{
             width: 600px;
             height: 700px;
             img{
-                width: 70px;
+                opacity: 0.1;
+                width: 50px;
                 height: auto;
             }
         }
@@ -165,15 +166,4 @@ body{
         background-attachment: fixed;
        
     }
-}
-@media (max-width: 650px) {
-    .container{
-        height: auto;
-        .card-container{
-            width: 500px;
-            height: auto;
-        }
-
-    }
-
 }
