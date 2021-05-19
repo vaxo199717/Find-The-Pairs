@@ -183,7 +183,7 @@ body {
 
 @media (max-width: 780px) {
   .start-screen {
-    height: 550px;
+    height: 100%;
   }
   .container {
     height: 100vh;
