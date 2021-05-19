@@ -17,7 +17,7 @@ body{
 .start-screen{
     z-index: 2;
 
-    background-color: rgba(134, 0, 0, 0.623);
+    background-color: rgba(0, 0, 0, 0.918);
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -152,9 +152,9 @@ body{
         flex-direction: column;
         .card-container{
             width: 95%;
-            background:red;
+
             img{
-                width: 22%;
+                width: 20%;
                 height: auto;
             }
 
