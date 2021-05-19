@@ -109,7 +109,7 @@ body{
             text-align: center;
             .text{
                 @include infoStyle;
-                padding-top: 40px;
+                
             
             }
             #timetext{
@@ -128,7 +128,6 @@ body{
                 border:none;
                 outline: none;
                 cursor:pointer;
-                margin-top: 30px;
                 padding: 10px 20px;
                 &:hover{
                     transition: all 500ms;
@@ -139,18 +138,17 @@ body{
     }
 }
 @media (max-width: 780px) {
+    .start-screen{
+        height: 550px;
+    }
     .container{
-        height:100vh;
-        padding-top: 5px;
+       height: 100vh;
+        padding-top: 50px;
         flex-direction: column;
         .card-container{
             width: 600px;
             height: 700px;
-            img{
-                opacity: 0.1;
-                width: 50px;
-                height: auto;
-            }
+
         }
         .info{
             width: 100%;
@@ -161,9 +159,5 @@ body{
             }
         }
     }
-    body{
 
-        background-attachment: fixed;
-       
-    }
 }

@@ -148,7 +148,6 @@ body {
 .container .info div .text {
   font-size: 25px;
   color: white;
-  padding-top: 40px;
 }
 
 .container .info div #timetext {
@@ -173,7 +172,6 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-top: 30px;
   padding: 10px 20px;
 }
 
@@ -184,9 +182,12 @@ body {
 }
 
 @media (max-width: 780px) {
+  .start-screen {
+    height: 550px;
+  }
   .container {
     height: 100vh;
-    padding-top: 5px;
+    padding-top: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -196,11 +197,6 @@ body {
     width: 600px;
     height: 700px;
   }
-  .container .card-container img {
-    opacity: 0.1;
-    width: 50px;
-    height: auto;
-  }
   .container .info {
     width: 100%;
     -webkit-box-pack: space-evenly;
@@ -209,9 +205,6 @@ body {
   }
   .container .info .sub-info {
     height: 100px;
-  }
-  body {
-    background-attachment: fixed;
   }
 }
 /*# sourceMappingURL=style.css.map */
