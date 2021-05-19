@@ -147,12 +147,12 @@ body{
         }
     }
     .container{
-       height: 100vh;
-        padding-top: 50px;
+       height: 100%;
+
         flex-direction: column;
         .card-container{
             width: 600px;
-            height: 700px;
+
 
         }
         .info{

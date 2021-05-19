@@ -190,8 +190,7 @@ body {
     height: 70%;
   }
   .container {
-    height: 100vh;
-    padding-top: 50px;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -199,7 +198,6 @@ body {
   }
   .container .card-container {
     width: 600px;
-    height: 700px;
   }
   .container .info {
     width: 100%;
