@@ -144,6 +144,9 @@ body{
 
         .start-screen-content{
             height: 70%;
+            .difficulty{
+                font-size: 30px;
+            }
         }
     }
     .container{
@@ -160,6 +163,7 @@ body{
 
         }
         .info{
+            margin-top: 30px;
             width: 100%;
             height: auto;
             justify-content: space-evenly;

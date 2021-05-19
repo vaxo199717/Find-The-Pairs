@@ -189,6 +189,9 @@ body {
   .start-screen .start-screen-content {
     height: 70%;
   }
+  .start-screen .start-screen-content .difficulty {
+    font-size: 30px;
+  }
   .container {
     height: 100%;
     -webkit-box-orient: vertical;
@@ -204,6 +207,7 @@ body {
     height: auto;
   }
   .container .info {
+    margin-top: 30px;
     width: 100%;
     height: auto;
     -webkit-box-pack: space-evenly;
