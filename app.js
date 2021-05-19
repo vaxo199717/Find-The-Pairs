@@ -132,7 +132,7 @@ fetch('cards.json')
                 card.setAttribute('src', 'images/back.jpg');
                 card.setAttribute('data-id', i);
                 card.addEventListener('click', flip)
-                cardContainer.appendChild(card);
+                // cardContainer.appendChild(card);
             }
         }
         //create and set cards
