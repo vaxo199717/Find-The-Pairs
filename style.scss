@@ -151,8 +151,11 @@ body{
 
         flex-direction: column;
         .card-container{
-            width: 600px;
-
+            width: 300px;
+            img{
+                width: 60px;
+                height: auto;
+            }
 
         }
         .info{
