@@ -191,6 +191,7 @@ body {
   }
   .start-screen .start-screen-content .difficulty {
     font-size: 30px;
+    width: 90%;
   }
   .container {
     height: 100%;
