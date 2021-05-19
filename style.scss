@@ -26,8 +26,8 @@ body{
 
     .start-screen-content{
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
 
         .start-text{
             text-align: center;
@@ -143,9 +143,10 @@ body{
         height: 100%;
 
         .start-screen-content{
-            height: 70%;
+            
+            
             .difficulty{
-                font-size: 30px;
+                font-size: 35px;
                 width: 90%;
             }
         }
