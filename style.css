@@ -197,21 +197,26 @@ body {
             flex-direction: column;
   }
   .container .card-container {
-    width: 300px;
+    width: 95%;
     background: red;
   }
   .container .card-container img {
-    width: 60px;
+    width: 20%;
     height: auto;
   }
   .container .info {
     width: 100%;
+    height: auto;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .container .info .sub-info {
-    height: 100px;
+  .container .info .restart {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
