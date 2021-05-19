@@ -168,7 +168,7 @@ body {
 }
 
 .container .info div #restartBtn {
-  font-size: 40px;
+  font-size: 45px;
   color: white;
   background: transparent;
   border: none;
@@ -182,5 +182,28 @@ body {
   -webkit-transition: all 500ms;
   transition: all 500ms;
   color: red;
+}
+
+@media (max-width: 780px) {
+  .container {
+    height: 100vh;
+    padding-top: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .info {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .container .info .sub-info {
+    height: 100px;
+  }
+  body {
+    background-attachment: fixed;
+  }
 }
 /*# sourceMappingURL=style.css.map */

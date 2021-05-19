@@ -73,9 +73,11 @@ fetch('cards.json')
         let winning = [];
 
         function startGame() {
+            console.log(screen.width + 'x' + screen.height)
             cardContainer.innerHTML = '';
             placeCards();
-            info.style.display = 'block';
+            screen.width <= 780?info.style.display = 'flex':info.style.display = 'block'
+            
             startScreen.style.display = 'none';
             let timerCountdown = setInterval(() => {
                 timerNum--
