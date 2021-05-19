@@ -198,6 +198,7 @@ body {
   }
   .container .card-container {
     width: 300px;
+    background: red;
   }
   .container .card-container img {
     width: 60px;
