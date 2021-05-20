@@ -76,8 +76,8 @@ fetch('cards.json')
             console.log(screen.width + 'x' + screen.height)
             cardContainer.innerHTML = '';
             placeCards();
-            screen.width <= 780?info.style.display = 'flex':info.style.display = 'block'
-            
+            screen.width <= 780 ? info.style.display = 'flex' : info.style.display = 'block'
+
             startScreen.style.display = 'none';
             let timerCountdown = setInterval(() => {
                 timerNum--
@@ -140,24 +140,24 @@ fetch('cards.json')
         //check if cards are same
         function checkForMatch() {
             let cards = document.querySelectorAll('img');
-
             const firstClickId = chosenCardsId[0];
             const secondClickId = chosenCardsId[1];
             if (chosenCards[0] === chosenCards[1]) {
-                cards[firstClickId].style.opacity = '0.7';
-                cards[secondClickId].style.opacity = '0.7';
-
+                setTimeout(() => {
+                    cards[firstClickId].style.opacity = '0.7';
+                    cards[secondClickId].style.opacity = '0.7';
+                }, 700);
                 winning.push(chosenCards);
             } else {
-
-                cards[firstClickId].setAttribute("style", "transition: transform 1000ms;transform: rotateY(180deg);");
-                cards[secondClickId].setAttribute("style", "transition: transform 1000ms;transform: rotateY(180deg);");
-
-
                 setTimeout(() => {
-                    cards[firstClickId].setAttribute('src', 'images/back.jpg');
-                    cards[secondClickId].setAttribute('src', 'images/back.jpg');
-                }, 300);
+                    cards[firstClickId].setAttribute("style", "transition: transform 700ms;transform: rotateY(180deg);");
+                    cards[secondClickId].setAttribute("style", "transition: transform 700ms;transform: rotateY(180deg);");
+
+                    setTimeout(() => {
+                        cards[firstClickId].setAttribute('src', 'images/back.jpg');
+                        cards[secondClickId].setAttribute('src', 'images/back.jpg');
+                    }, 212);
+                }, 700);
             }
             chosenCards = [];
             chosenCardsId = [];
@@ -172,13 +172,13 @@ fetch('cards.json')
             let cardNum = this.getAttribute('data-id');
             chosenCards.push(shufflecards[cardNum].name);
             chosenCardsId.push(cardNum);
-            this.setAttribute("style", "transition: transform 1000ms;transform: rotateY(0deg);");
+            this.setAttribute("style", "transition: transform 700ms;transform: rotateY(0deg);");
 
             setTimeout(() => {
                 this.setAttribute('src', shufflecards[cardNum].img);
-            }, 200);
+            }, 212);
             if (chosenCards.length === 2) {
-                setTimeout(checkForMatch, 1000)
+                checkForMatch()
             }
         }
         //flip cards
