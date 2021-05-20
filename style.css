@@ -217,6 +217,9 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .container .info .sub-info {
+    padding: 0;
+  }
   .container .info .restart {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
