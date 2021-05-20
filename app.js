@@ -137,15 +137,15 @@ fetch('cards.json')
         }
         //create and set cards
 
-        //check if cards  are same
+        //check if cards are same
         function checkForMatch() {
             let cards = document.querySelectorAll('img');
             const firstClickId = chosenCardsId[0];
             const secondClickId = chosenCardsId[1];
             if (chosenCards[0] === chosenCards[1]) {
                 setTimeout(() => {
-                    cards[firstClickId].style.opacity = '0.7';
-                    cards[secondClickId].style.opacity = '0.7';
+                    cards[firstClickId].setAttribute('class', 'matchedCards');
+                    cards[secondClickId].setAttribute('class', 'matchedCards');
                 }, 700);
                 winning.push(chosenCards);
             } else {

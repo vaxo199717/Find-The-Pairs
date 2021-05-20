@@ -4,6 +4,10 @@
   font-family: 'Creepster', cursive;
 }
 
+.matchedCards {
+  z-index: -1;
+}
+
 body {
   background-image: url(/images/background.jpg);
   background-size: cover;
