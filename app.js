@@ -176,7 +176,7 @@ fetch('cards.json')
 
             setTimeout(() => {
                 this.setAttribute('src', shufflecards[cardNum].img);
-            }, 300);
+            }, 200);
             if (chosenCards.length === 2) {
                 setTimeout(checkForMatch, 1000)
             }
