@@ -172,11 +172,16 @@ fetch('cards.json')
             let cardNum = this.getAttribute('data-id');
             chosenCards.push(shufflecards[cardNum].name);
             chosenCardsId.push(cardNum);
+
             this.setAttribute("style", "transition: transform 700ms;transform: rotateY(0deg);");
 
             setTimeout(() => {
                 this.setAttribute('src', shufflecards[cardNum].img);
             }, 212);
+            if(chosenCardsId[0] === chosenCardsId[1]){
+                chosenCardsId.pop();
+                chosenCards.pop();
+            }
             if (chosenCards.length === 2) {
                 checkForMatch()
             }
