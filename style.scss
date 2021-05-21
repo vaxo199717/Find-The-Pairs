@@ -11,6 +11,9 @@
 .matchedCards{
     z-index: -1;
 }
+.dissapeared{
+    display: none;
+}
 body{
     background-image: url(/images/background.jpg);
     background-size: cover;
@@ -28,6 +31,7 @@ body{
 
     .start-screen-content{
         display: flex;
+        width: 630px;
         flex-direction: column;
         justify-content: space-evenly;
 
@@ -60,7 +64,7 @@ body{
         .start-button{
             text-align: center;
             width: 100%;
-            #start-btn{
+            .btn{
                 color: white;
                 cursor:pointer;
                 background-color: transparent;

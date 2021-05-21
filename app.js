@@ -9,10 +9,13 @@ const matchDisplay = document.querySelector('.match-cuantity');
 //start, lose and win page
 const startText = document.querySelector('.start-text');
 const startBtn = document.querySelector('#start-btn');
+const tryAgainBtn = document.querySelector('#try-again');
+const playAgainBtn = document.querySelector('#play-again');
 const hard = document.querySelector('#hard');
 const medium = document.querySelector('#medium');
 const easy = document.querySelector('#easy');
 const startScreen = document.querySelector('.start-screen');
+const buttonDiv = document.querySelector('.start-button');
 //start, lose and win page
 
 //loader
@@ -27,7 +30,7 @@ fetch('cards.json')
     .then(cardsData => {
 
         //shuffle cards array
-        const shufflecards = cardsData.sort((a, b) => 0.5 - Math.random());
+        let shufflecards = cardsData.sort((a, b) => 0.5 - Math.random());
         //shuffle cards array
 
         //default difficulty
@@ -41,7 +44,7 @@ fetch('cards.json')
             hard.setAttribute('class', 'difficulty-style');
             medium.classList.remove("difficulty-style");
             easy.classList.remove("difficulty-style");
-            timerNum = 30;
+            timerNum = 5;
             timer.textContent = timerNum;
         })
         //hard difficulty
@@ -86,9 +89,55 @@ fetch('cards.json')
                 timer.textContent = timerNum;
                 if (checkTime()) {
                     startScreen.style.display = 'flex'
-                    startBtn.textContent = 'TRY AGAIN'
+                    startBtn.setAttribute('class', 'dissapeared');
                     startText.textContent = 'You Have Lost'
-                    startText.setAttribute('style', 'color:red; font-size:100px')
+                    easy.classList.remove("difficulty-style");
+                    hard.classList.remove("difficulty-style");
+                    medium.setAttribute('class', "difficulty-style");
+                    tryAgainBtn.classList.remove('dissapeared');
+                    info.style.display = 'none';
+                    clearInterval(timerCountdown);
+                    click.textContent = 0;
+                    clickCounter = 0;
+                    timer.textContent = 50;
+                    timerNum = 50;
+                    winning = [];
+                    matchDisplay.textContent = 0;
+
+                }
+                if (winning.length === shufflecards.length / 2) {
+                    startScreen.style.display = 'flex'
+                    startBtn.setAttribute('class', 'dissapeared');
+                    tryAgainBtn.setAttribute('class', 'dissapeared');
+                    playAgainBtn.classList.remove("dissapeared");
+                    info.style.display = 'none';
+                    clearInterval(timerCountdown);
+                    click.textContent = 0;
+                    clickCounter = 0;
+                    timer.textContent = 50;
+                    timerNum = 50;
+                    winning = [];
+                    matchDisplay.textContent = 0;
+
+                    
+                }
+            }, 1000);
+        }
+        //try again -----------------------------------
+        tryAgainBtn.addEventListener('click', () =>{
+            cardContainer.innerHTML = '';
+            placeCards();
+            screen.width <= 780 ? info.style.display = 'flex' : info.style.display = 'block'
+
+            startScreen.style.display = 'none';
+            let timerCountdown = setInterval(() => {
+                timerNum--
+                timer.textContent = timerNum;
+                if (checkTime()) {
+                    startScreen.style.display = 'flex'
+                    startBtn.setAttribute('class', 'dissapeared');
+                    startText.textContent = 'You Have Lost'
+                    tryAgainBtn.classList.remove('dissapeared');
                     info.style.display = 'none';
                     clearInterval(timerCountdown);
                     click.textContent = 0;
@@ -114,8 +163,48 @@ fetch('cards.json')
                     matchDisplay.textContent = 0;
                 }
             }, 1000);
-        }
+        })
+        playAgainBtn.addEventListener('click', ()=>{
+            cardContainer.innerHTML = '';
+            placeCards();
+            screen.width <= 780 ? info.style.display = 'flex' : info.style.display = 'block'
 
+            startScreen.style.display = 'none';
+            let timerCountdown = setInterval(() => {
+                timerNum--
+                timer.textContent = timerNum;
+                if (checkTime()) {
+                    startScreen.style.display = 'flex'
+                    startBtn.setAttribute('class', 'dissapeared');
+                    startText.textContent = 'You Have Lost'
+                    tryAgainBtn.classList.remove('dissapeared');
+                    info.style.display = 'none';
+                    clearInterval(timerCountdown);
+                    click.textContent = 0;
+                    clickCounter = 0;
+                    timer.textContent = 50;
+                    timerNum = 50;
+                    winning = [];
+                    matchDisplay.textContent = 0;
+
+                }
+                if (winning.length === shufflecards.length / 2) {
+                    startScreen.style.display = 'flex'
+                    startBtn.textContent = 'PLAY AGAIN'
+                    startText.textContent = 'You Have Won'
+                    startText.setAttribute('style', 'color:green; font-size:100px')
+                    info.style.display = 'none';
+                    clearInterval(timerCountdown);
+                    click.textContent = 0;
+                    clickCounter = 0;
+                    timer.textContent = 50;
+                    timerNum = 50;
+                    winning = [];
+                    matchDisplay.textContent = 0;
+                }
+            }, 1000);
+        })
+//try again -----------------------------------
         //timer check
         function checkTime() {
             if (timerNum === 0) {
@@ -128,6 +217,8 @@ fetch('cards.json')
 
         //create and set cards
         function placeCards() {
+            shufflecards = cardsData.sort((a, b) => 0.5 - Math.random());
+            cardContainer.style.display = 'none';
             for (let i = 0; i < shufflecards.length; i++) {
                 let card = document.createElement('img');
                 card.style.transform = 'rotateY(180deg)';
@@ -137,7 +228,7 @@ fetch('cards.json')
                     card.setAttribute('src', 'images/back.jpg');
                     loader.style.display = 'none';
                     cardContainer.style.display = 'flex';
-                    // cardContainer.setAttribute('style', 'display:flex; transition:300ms; opacity:1;');
+                    
                 }, 2000);
 
                 card.setAttribute('data-id', i);
