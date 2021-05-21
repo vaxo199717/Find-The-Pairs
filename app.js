@@ -128,9 +128,15 @@ fetch('cards.json')
         function placeCards() {
             for (let i = 0; i < shufflecards.length; i++) {
                 let card = document.createElement('img');
-                card.style.transform = 'rotateY(180deg)'
-                // card.setAttribute('src', shufflecards[i].img);
-                card.setAttribute('src', 'images/back.jpg');
+                card.style.transform = 'rotateY(180deg)';
+
+                card.setAttribute('src', shufflecards[i].img);
+                setTimeout(() => {
+                    card.setAttribute('src', 'images/back.jpg');
+                    cardContainer.setAttribute('style', 'transition:300ms; opacity:1;')
+                  
+                }, 1000);
+                
                 card.setAttribute('data-id', i);
                 card.addEventListener('click', flip)
                 cardContainer.appendChild(card);

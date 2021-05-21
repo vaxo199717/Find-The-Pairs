@@ -112,6 +112,7 @@ body {
 }
 
 .container .card-container {
+  opacity: 0;
   width: 670px;
   display: -webkit-box;
   display: -ms-flexbox;

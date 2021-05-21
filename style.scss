@@ -78,11 +78,13 @@ body{
     }
 }
 .container{
+
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     .card-container{
+        opacity: 0;
         width: 670px;
         display: flex;
         justify-content: space-evenly;
