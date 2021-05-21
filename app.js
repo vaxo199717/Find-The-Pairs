@@ -15,7 +15,9 @@ const easy = document.querySelector('#easy');
 const startScreen = document.querySelector('.start-screen');
 //start, lose and win page
 
-
+//loader
+const loader = document.querySelector('.card-loading');
+//loader
 //cards place
 const cardContainer = document.querySelector('.card-container');
 //cards place
@@ -129,14 +131,15 @@ fetch('cards.json')
             for (let i = 0; i < shufflecards.length; i++) {
                 let card = document.createElement('img');
                 card.style.transform = 'rotateY(180deg)';
-
+                loader.style.display = 'flex';
                 card.setAttribute('src', shufflecards[i].img);
                 setTimeout(() => {
                     card.setAttribute('src', 'images/back.jpg');
-                    cardContainer.setAttribute('style', 'transition:300ms; opacity:1;')
-                  
-                }, 1000);
-                
+                    loader.style.display = 'none';
+                    cardContainer.style.display = 'flex';
+                    // cardContainer.setAttribute('style', 'display:flex; transition:300ms; opacity:1;');
+                }, 2000);
+
                 card.setAttribute('data-id', i);
                 card.addEventListener('click', flip)
                 cardContainer.appendChild(card);
@@ -185,7 +188,7 @@ fetch('cards.json')
             setTimeout(() => {
                 this.setAttribute('src', shufflecards[cardNum].img);
             }, 212);
-            if(chosenCardsId[0] === chosenCardsId[1]){
+            if (chosenCardsId[0] === chosenCardsId[1]) {
                 chosenCardsId.pop();
                 chosenCards.pop();
             }
