@@ -8,10 +8,6 @@
   z-index: -1;
 }
 
-.dissapeared {
-  display: none;
-}
-
 body {
   background-image: url(/images/background.jpg);
   background-size: cover;
@@ -47,11 +43,19 @@ body {
           justify-content: space-evenly;
 }
 
-.start-screen .start-screen-content .start-text {
+.start-screen .start-screen-content .starting-text {
   text-align: center;
   width: 100%;
   font-size: 50px;
   color: #ffbc04;
+}
+
+.start-screen .start-screen-content .losing-text {
+  color: red;
+}
+
+.start-screen .start-screen-content .winning-text {
+  color: green;
 }
 
 .start-screen .start-screen-content .difficulty {
@@ -82,12 +86,12 @@ body {
   color: #0069f1;
 }
 
-.start-screen .start-screen-content .start-button {
+.start-screen .start-screen-content .buttons {
   text-align: center;
   width: 100%;
 }
 
-.start-screen .start-screen-content .start-button .btn {
+.start-screen .start-screen-content .buttons .btn {
   color: white;
   cursor: pointer;
   background-color: transparent;
@@ -99,7 +103,7 @@ body {
   font-size: 70px;
 }
 
-.start-screen .start-screen-content .start-button .btn:hover {
+.start-screen .start-screen-content .buttons .btn:hover {
   color: #bb0000;
 }
 
@@ -157,6 +161,13 @@ body {
 
 .container .info {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 200px;
   height: auto;
 }
@@ -219,7 +230,11 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .container .card-loading {
+    height: 70vh;
+  }
   .container .card-container {
+    height: 70vh;
     width: 95%;
   }
   .container .card-container img {
@@ -229,7 +244,11 @@ body {
   .container .info {
     margin-top: 30px;
     width: 100%;
-    height: auto;
+    height: 20vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -304,5 +323,13 @@ body {
     -webkit-transform: rotate(1800deg);
             transform: rotate(1800deg);
   }
+}
+
+.dissapeared {
+  display: none;
+}
+
+.appeared {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

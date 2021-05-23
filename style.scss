@@ -8,12 +8,16 @@
     font-size: 25px;
     color: white;  
 }
+@mixin infoText {
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+}
 .matchedCards{
     z-index: -1;
 }
-.dissapeared{
-    display: none;
-}
+
+
 body{
     background-image: url(/images/background.jpg);
     background-size: cover;
@@ -35,11 +39,17 @@ body{
         flex-direction: column;
         justify-content: space-evenly;
 
-        .start-text{
-            text-align: center;
-            width: 100%;
-            font-size: 50px;
+        .starting-text{
+            @include infoText;
             color: rgb(255, 188, 4);
+        }
+        .losing-text{
+
+            color: red;
+        }
+        .winning-text{
+
+            color: green;
         }
         .difficulty{
             display: flex;
@@ -61,7 +71,7 @@ body{
                 color: rgb(0, 105, 241);
             }
         }
-        .start-button{
+        .buttons{
             text-align: center;
             width: 100%;
             .btn{
@@ -113,9 +123,10 @@ body{
     }
     .info{
         display: none;
+        flex-direction: column;
+        justify-content: space-between;
         width: 200px;
         height: auto;
-
         .sub-info{
             padding: 30px 0;
             height: 25%;
@@ -168,7 +179,11 @@ body{
        height: 100%;
 
         flex-direction: column;
+        .card-loading{
+            height: 70vh;
+        }
         .card-container{
+            height: 70vh;
             width: 95%;
 
             img{
@@ -177,10 +192,12 @@ body{
             }
 
         }
+
         .info{
             margin-top: 30px;
             width: 100%;
-            height: auto;
+            height: 20vh;
+            flex-direction: row;
             justify-content: space-evenly;
             flex-wrap: wrap;
 
@@ -228,3 +245,11 @@ body{
     }
   }
   
+
+
+.dissapeared{
+    display: none;
+}
+.appeared{
+    display: block;
+}
