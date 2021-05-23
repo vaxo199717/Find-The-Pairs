@@ -70,5 +70,13 @@
     {
         "name": "9",
         "img": "images/9.png"
+    },
+    {
+        "name": "8",
+        "img": "images/8.png"
+    },
+    {
+        "name": "9",
+        "img": "images/9.png"
     }
 ]

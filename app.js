@@ -88,20 +88,22 @@ fetch('cards.json')
             // screen.width <= 780 ? info.style.display = 'flex' : info.style.display = 'block'
             info.style.display = 'flex';
             startScreen.style.display = 'none';
-            let timerCountdown = setInterval(() => {
-                timerNum--
-                timer.textContent = timerNum;
-                if (checkTime()) {
-                    lost();
-                    clearInterval(timerCountdown);
-                    playTryAgain();
-                }
-                if (winning.length === shufflecards.length / 2) {
-                    won();
-                    clearInterval(timerCountdown);
-                    playTryAgain();
-                }
-            }, 1000);
+            setTimeout(() => {
+                let timerCountdown = setInterval(() => {
+                    timerNum--
+                    timer.textContent = timerNum;
+                    if (checkTime()) {
+                        lost();
+                        clearInterval(timerCountdown);
+                        playTryAgain();
+                    }
+                    if (winning.length === shufflecards.length / 2) {
+                        won();
+                        clearInterval(timerCountdown);
+                        playTryAgain();
+                    }
+                }, 1000);
+            }, 2000);
         }
        
         playAgainBtn.addEventListener('click', () => {
@@ -110,20 +112,22 @@ fetch('cards.json')
             // screen.width <= 780 ? info.style.display = 'flex' : info.style.display = 'block'
             info.style.display = 'flex';
             startScreen.style.display = 'none';
-            let timerCountdown = setInterval(() => {
-                timerNum--
-                timer.textContent = timerNum;
-                if (checkTime()) {
-                    lost();
-                    clearInterval(timerCountdown);
-                    playTryAgain();
-                }
-                if (winning.length === shufflecards.length / 2) {
-                    won();
-                    clearInterval(timerCountdown);
-                    playTryAgain();
-                }
-            }, 1000);
+            setTimeout(() => {
+                let timerCountdown = setInterval(() => {
+                    timerNum--
+                    timer.textContent = timerNum;
+                    if (checkTime()) {
+                        lost();
+                        clearInterval(timerCountdown);
+                        playTryAgain();
+                    }
+                    if (winning.length === shufflecards.length / 2) {
+                        won();
+                        clearInterval(timerCountdown);
+                        playTryAgain();
+                    }
+                }, 1000);
+            }, 2000);
         })
         //try again -----------------------------------
         //timer check
@@ -156,6 +160,7 @@ fetch('cards.json')
             hard.classList.remove("difficulty-style");
             medium.setAttribute('class', "difficulty-style");
             info.style.display = 'none';
+            cardContainer.style.display = 'none';
             click.textContent = 0;
             clickCounter = 0;
             timer.textContent = 50;

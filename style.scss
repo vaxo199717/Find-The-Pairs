@@ -5,7 +5,7 @@
 }
 
 @mixin infoStyle {
-    font-size: 25px;
+    font-size: 35px;
     color: white;  
 }
 @mixin infoText {
@@ -42,14 +42,6 @@ body{
         .starting-text{
             @include infoText;
             color: rgb(255, 188, 4);
-        }
-        .losing-text{
-
-            color: red;
-        }
-        .winning-text{
-
-            color: green;
         }
         .difficulty{
             display: flex;
@@ -98,15 +90,15 @@ body{
     justify-content: center;
     align-items: center;
     .card-loading{
-        height: 350px;
+        height: 600px;
         display: none;
         justify-content: center;
         align-items: center;
-        width: 670px;
+        width: 520px;
     }
     .card-container{
         display: none;
-        width: 670px;
+        width: 520px;
         justify-content: space-evenly;
         align-items:center;
         flex-wrap: wrap;
@@ -125,11 +117,13 @@ body{
         display: none;
         flex-direction: column;
         justify-content: space-between;
+        height: 600px;
         width: 200px;
-        height: auto;
+
         .sub-info{
             padding: 30px 0;
             height: 25%;
+
             text-align: center;
             .text{
                 @include infoStyle;
@@ -180,10 +174,10 @@ body{
 
         flex-direction: column;
         .card-loading{
-            height: 70vh;
+            height: 60vh;
         }
         .card-container{
-            height: 70vh;
+            height: 60vh;
             width: 95%;
 
             img{

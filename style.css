@@ -50,14 +50,6 @@ body {
   color: #ffbc04;
 }
 
-.start-screen .start-screen-content .losing-text {
-  color: red;
-}
-
-.start-screen .start-screen-content .winning-text {
-  color: green;
-}
-
 .start-screen .start-screen-content .difficulty {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,7 +113,7 @@ body {
 }
 
 .container .card-loading {
-  height: 350px;
+  height: 600px;
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -129,12 +121,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 670px;
+  width: 520px;
 }
 
 .container .card-container {
   display: none;
-  width: 670px;
+  width: 520px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -168,8 +160,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 600px;
   width: 200px;
-  height: auto;
 }
 
 .container .info .sub-info {
@@ -179,22 +171,22 @@ body {
 }
 
 .container .info .sub-info .text {
-  font-size: 25px;
+  font-size: 35px;
   color: white;
 }
 
 .container .info .sub-info #timetext {
-  font-size: 25px;
+  font-size: 35px;
   color: white;
 }
 
 .container .info .sub-info #totalclicks {
-  font-size: 25px;
+  font-size: 35px;
   color: white;
 }
 
 .container .info .sub-info .match-cuantity {
-  font-size: 25px;
+  font-size: 35px;
   color: white;
 }
 
@@ -231,10 +223,10 @@ body {
             flex-direction: column;
   }
   .container .card-loading {
-    height: 70vh;
+    height: 60vh;
   }
   .container .card-container {
-    height: 70vh;
+    height: 60vh;
     width: 95%;
   }
   .container .card-container img {
