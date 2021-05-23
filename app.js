@@ -37,7 +37,7 @@ fetch('cards.json')
 
         //default difficulty
         medium.setAttribute('class', 'difficulty-style');
-        let timerNum = 50;
+        let timerNum = 60;
         timer.textContent = timerNum;
         //default difficulty
 
@@ -46,7 +46,7 @@ fetch('cards.json')
             hard.setAttribute('class', 'difficulty-style');
             medium.classList.remove("difficulty-style");
             easy.classList.remove("difficulty-style");
-            timerNum = 5;
+            timerNum = 40;
             timer.textContent = timerNum;
         })
         //hard difficulty
@@ -56,7 +56,7 @@ fetch('cards.json')
             medium.setAttribute('class', 'difficulty-style');
             hard.classList.remove("difficulty-style");
             easy.classList.remove("difficulty-style");
-            timerNum = 50;
+            timerNum = 60;
             timer.textContent = timerNum;
         })
         //medium difficulty
@@ -66,7 +66,7 @@ fetch('cards.json')
             easy.setAttribute('class', 'difficulty-style');
             hard.classList.remove("difficulty-style");
             medium.classList.remove("difficulty-style");
-            timerNum = 70;
+            timerNum = 80;
             timer.textContent = timerNum;
         })
         //easy difficulty
